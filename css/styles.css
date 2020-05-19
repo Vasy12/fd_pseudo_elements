@@ -1,0 +1,30 @@
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    cursor: pointer;
+}
+
+
+li::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    height: 4px;
+    background: dodgerblue;
+    width: 0;
+
+    transition: width 1s;
+}
+
+li:hover::before {
+    width: 100%;
+}
